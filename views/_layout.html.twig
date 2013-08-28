@@ -34,16 +34,7 @@
         </div>
     </div>
         {% if box %}
-            <div class="wrapper">
-                <div class="panel panel-{% if not user.logged %}info{% else %}success{% endif %}">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">{{ box.title }}</h3>
-                    </div>
-                    <div class="panel-body">
-                        {{ box.content|raw }}
-                    </div>
-                </div>
-            </div>
+            {{ box.content|raw }}
         {% endif %}
         {% if page %}
             <div class="wrapper-wide">
