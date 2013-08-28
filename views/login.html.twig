@@ -15,5 +15,9 @@
     </fieldset>
 </form>
 {% else %}
-    Zalogowany jako: {{ user.email }}
+    Zalogowany jako: {{ user.email }}.<br />
+    Następuje przekierowanie...
+    <script type="text/javascript">
+        setTimeout(function() { window.location = '/'; }, 1000);
+    </script>
 {% endif %}
