@@ -3649,6 +3649,7 @@ input[type="button"].btn-block {
 .btn-group > .btn + .dropdown-toggle {
     padding-right: 8px;
     padding-left: 8px;
+    height: 38px;
 }
 
 .btn-group > .btn-lg + .dropdown-toggle {

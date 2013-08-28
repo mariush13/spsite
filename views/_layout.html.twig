@@ -4,6 +4,7 @@
         <title>{{ page.title }}</title>
         <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script type="text/javascript" src="/static/js/bootstrap.js"></script>
     </head>
     <body>
@@ -21,6 +22,16 @@
             </div>
             <div class="navbar-collapse collapse" id="navbar-main">
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dev Tools <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/installer/show">Instalator klass php</a></li>
+                            <li><a href="/objects/1/edit">Edycja strony głównej</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
                     <li>
                         {% if not user.logged %}
                             <a href="/user/login">Logowanie</a>
@@ -34,15 +45,14 @@
         </div>
     </div>
         {% if box %}
-            {{ box.content|raw }}
+            <div class="wrapper">
+                {{ box.content|raw }}
+            </div>
         {% endif %}
         {% if page %}
             <div class="wrapper-wide">
-                <div class="container">
-                    <div class="jumbotron">
-                        {{ page.content|raw }}
-                    </div>
-                </div>
+                {{ page.content|raw }} {# Do not remove! #}
+                {{ page_content }} {# Do not remove! #}
             </div>
         {% endif %}
         </div>

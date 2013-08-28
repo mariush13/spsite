@@ -10,6 +10,10 @@ $config = array (
     ),
     'site' => array(
         'root_directory' => ''
+    ),
+//    propozycje nowych elementów konfiguracji
+    'layout' => array(
+        ''
     )
 );
 
