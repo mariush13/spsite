@@ -24,7 +24,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     {% if users.user.admin %}
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dev Tools <b class="caret"></b></a>
+                        <a href="/" class="dropdown-toggle" data-toggle="dropdown">Dev Tools <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="/installer/show">Instalator klass php</a></li>
                             <li><a href="/objects/1/edit">Edycja strony głównej</a></li>
@@ -38,7 +38,10 @@
                         {% if not users.user %}
                             <a href="/login">Logowanie</a>
                         {% else %}
-                            <a href="/logout">Wyloguj</a>
+                            <a href="/objects/{{ users.user.ID }}" class="dropdown-toggle" data-toggle="dropdown">{{ users.user.email }} <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/logout">Wyloguj</a></li>
+                            </ul>
                         {% endif %}
                     </li>
                 </ul>
