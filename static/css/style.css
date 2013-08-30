@@ -31,3 +31,8 @@ body {
 .fright {
     float: right;
 }
+
+span {
+    color: #f89406;
+    text-shadow: 1px 1px rgb(12, 3, 3);
+}

@@ -22,6 +22,7 @@
             </div>
             <div class="navbar-collapse collapse" id="navbar-main">
                 <ul class="nav navbar-nav navbar-right">
+                    {% if users.user.admin %}
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dev Tools <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -32,11 +33,12 @@
                             <li><a href="#">Separated link</a></li>
                         </ul>
                     </li>
+                    {% endif %}
                     <li>
-                        {% if not user.logged %}
-                            <a href="/user/login">Logowanie</a>
+                        {% if not users.user %}
+                            <a href="/login">Logowanie</a>
                         {% else %}
-                            <a href="/user/logout">Wyloguj</a>
+                            <a href="/logout">Wyloguj</a>
                         {% endif %}
                     </li>
                 </ul>
