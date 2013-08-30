@@ -7,12 +7,13 @@
     margin-left: -260px;
 }
 
+
 .wrapper-wide {
     width: 960px;
     position: absolute;
     left: 50%;
-    top: 35%;
     margin-left: -465px;
+    margin-top: 200px;
 }
 
 #logo {
@@ -35,4 +36,9 @@ body {
 span {
     color: #f89406;
     text-shadow: 1px 1px rgb(12, 3, 3);
+}
+
+.save-button {
+    margin-top: -7px;
+    float: right;
 }
